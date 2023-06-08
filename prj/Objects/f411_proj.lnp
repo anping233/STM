@@ -8,7 +8,6 @@
 ".\objects\main.o"
 ".\objects\libs.o"
 ".\objects\usart.o"
-".\objects\gpio_1.o"
 ".\objects\driver.o"
 ".\objects\delay.o"
 ".\objects\rcc_1.o"

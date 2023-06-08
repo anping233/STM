@@ -1,6 +1,6 @@
-./objects/main.o: ..\src\main\main.c ..\src\main\include.h \
-  ..\src\libs\libs.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+./objects/main.o: ..\src\main\main.c \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\src\main\include.h \
+  ..\src\libs\libs.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\src\std_lib\std_lib.h ..\src\std_lib\inc\stm32f4xx.h \

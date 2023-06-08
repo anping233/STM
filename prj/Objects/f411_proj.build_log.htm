@@ -18,30 +18,22 @@ Hex Converter:   FromElf.exe V6.19
 CPU DLL:         SARMCM3.DLL V5.38.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
 Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
-Dialog DLL:      TCM.DLL V1.56.4.0
+Dialog DLL:      TARMSTM.DLL V1.67.1.0
  
 <h2>Project:</h2>
 D:\study\STM32\practice\gpio\prj\f411_proj.uvprojx
-Project File Date:  05/27/2023
+Project File Date:  06/02/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-Note: source file '..\src\driver\gpio\gpio.c' - object file renamed from '.\Objects\gpio.o' to '.\Objects\gpio_1.o'.
 Note: source file '..\src\driver\rcc\rcc.c' - object file renamed from '.\Objects\rcc.o' to '.\Objects\rcc_1.o'.
-compiling libs.c...
-compiling driver.c...
-compiling gpio_config.c...
-../src/main/main.c(18): error: call to undeclared function 'led'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
-                 led(0);
-                 ^
-1 error generated.
-compiling main.c...
-compiling delay.c...
-compiling rcc.c...
-compiling gpio.c...
-compiling led.c...
-".\Objects\f411_proj.axf" - 1 Error(s), 0 Warning(s).
+compiling usart.c...
+linking...
+Program Size: Code=5174 RO-data=458 RW-data=4 ZI-data=1028  
+After Build - User command #1: C:\Keil_v5\ARM\ARMCLANG\bin\fromelf.exe -c  Objects/f411_proj.axf -o  Objects/f411_proj.txt
+After Build - User command #2: C:\Keil_v5\ARM\ARMCLANG\bin\fromelf.exe --bin --output bin/f411_proj.bin Objects/f411_proj.axf
+".\Objects\f411_proj.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,8 +46,7 @@ Package Vendor: Keil
   C:/Users/anping/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
-Target not created.
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
