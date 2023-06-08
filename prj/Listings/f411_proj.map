@@ -1,0 +1,382 @@
+Component: Arm Compiler for Embedded 6.19 Tool: armlink [5e73cb00]
+
+==============================================================================
+
+Section Cross References
+
+    misc.o(.text.NVIC_PriorityGroupConfig) refers to misc.o(.rodata.str1.1) for .L.str
+    misc.o(.text.NVIC_PriorityGroupConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    misc.o(.ARM.exidx.text.NVIC_PriorityGroupConfig) refers to misc.o(.text.NVIC_PriorityGroupConfig) for [Anonymous Symbol]
+    misc.o(.text.NVIC_Init) refers to misc.o(.rodata.str1.1) for .L.str.2
+    misc.o(.text.NVIC_Init) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    misc.o(.ARM.exidx.text.NVIC_Init) refers to misc.o(.text.NVIC_Init) for [Anonymous Symbol]
+    misc.o(.text.NVIC_SetVectorTable) refers to misc.o(.rodata.str1.1) for .L.str.5
+    misc.o(.text.NVIC_SetVectorTable) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    misc.o(.ARM.exidx.text.NVIC_SetVectorTable) refers to misc.o(.text.NVIC_SetVectorTable) for [Anonymous Symbol]
+    misc.o(.text.NVIC_SystemLPConfig) refers to misc.o(.rodata.str1.1) for .L.str.7
+    misc.o(.text.NVIC_SystemLPConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    misc.o(.ARM.exidx.text.NVIC_SystemLPConfig) refers to misc.o(.text.NVIC_SystemLPConfig) for [Anonymous Symbol]
+    misc.o(.text.SysTick_CLKSourceConfig) refers to misc.o(.rodata.str1.1) for .L.str.9
+    misc.o(.text.SysTick_CLKSourceConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    misc.o(.ARM.exidx.text.SysTick_CLKSourceConfig) refers to misc.o(.text.SysTick_CLKSourceConfig) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_DeInit) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_DeInit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.text.GPIO_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_AHB1PeriphResetCmd) for RCC_AHB1PeriphResetCmd
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_DeInit) refers to stm32f4xx_gpio.o(.text.GPIO_DeInit) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_Init) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_Init) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_Init) refers to stm32f4xx_gpio.o(.text.GPIO_Init) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_StructInit) refers to stm32f4xx_gpio.o(.text.GPIO_StructInit) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_PinLockConfig) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_PinLockConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_PinLockConfig) refers to stm32f4xx_gpio.o(.text.GPIO_PinLockConfig) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadInputDataBit) refers to stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_ReadInputData) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_ReadInputData) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadInputData) refers to stm32f4xx_gpio.o(.text.GPIO_ReadInputData) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_ReadOutputDataBit) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_ReadOutputDataBit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadOutputDataBit) refers to stm32f4xx_gpio.o(.text.GPIO_ReadOutputDataBit) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_ReadOutputData) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_ReadOutputData) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadOutputData) refers to stm32f4xx_gpio.o(.text.GPIO_ReadOutputData) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_SetBits) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_SetBits) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_SetBits) refers to stm32f4xx_gpio.o(.text.GPIO_SetBits) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_ResetBits) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_ResetBits) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ResetBits) refers to stm32f4xx_gpio.o(.text.GPIO_ResetBits) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_WriteBit) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_WriteBit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_WriteBit) refers to stm32f4xx_gpio.o(.text.GPIO_WriteBit) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_Write) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_Write) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_Write) refers to stm32f4xx_gpio.o(.text.GPIO_Write) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_ToggleBits) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_ToggleBits) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ToggleBits) refers to stm32f4xx_gpio.o(.text.GPIO_ToggleBits) for [Anonymous Symbol]
+    stm32f4xx_gpio.o(.text.GPIO_PinAFConfig) refers to stm32f4xx_gpio.o(.rodata.str1.1) for .L.str
+    stm32f4xx_gpio.o(.text.GPIO_PinAFConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_PinAFConfig) refers to stm32f4xx_gpio.o(.text.GPIO_PinAFConfig) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_DeInit) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_DeInit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.text.USART_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f4xx_usart.o(.text.USART_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_DeInit) refers to stm32f4xx_usart.o(.text.USART_DeInit) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_Init) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_Init) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.text.USART_Init) refers to stm32f4xx_rcc.o(.text.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_Init) refers to stm32f4xx_usart.o(.text.USART_Init) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_StructInit) refers to stm32f4xx_usart.o(.text.USART_StructInit) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_ClockInit) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str.8
+    stm32f4xx_usart.o(.text.USART_ClockInit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_ClockInit) refers to stm32f4xx_usart.o(.text.USART_ClockInit) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_ClockStructInit) refers to stm32f4xx_usart.o(.text.USART_ClockStructInit) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_Cmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_Cmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_Cmd) refers to stm32f4xx_usart.o(.text.USART_Cmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_SetPrescaler) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_SetPrescaler) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_SetPrescaler) refers to stm32f4xx_usart.o(.text.USART_SetPrescaler) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_OverSampling8Cmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_OverSampling8Cmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_OverSampling8Cmd) refers to stm32f4xx_usart.o(.text.USART_OverSampling8Cmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_OneBitMethodCmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_OneBitMethodCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_OneBitMethodCmd) refers to stm32f4xx_usart.o(.text.USART_OneBitMethodCmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_SendData) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_SendData) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_SendData) refers to stm32f4xx_usart.o(.text.USART_SendData) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_ReceiveData) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_ReceiveData) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_ReceiveData) refers to stm32f4xx_usart.o(.text.USART_ReceiveData) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_SetAddress) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_SetAddress) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_SetAddress) refers to stm32f4xx_usart.o(.text.USART_SetAddress) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_ReceiverWakeUpCmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_ReceiverWakeUpCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_ReceiverWakeUpCmd) refers to stm32f4xx_usart.o(.text.USART_ReceiverWakeUpCmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_WakeUpConfig) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_WakeUpConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_WakeUpConfig) refers to stm32f4xx_usart.o(.text.USART_WakeUpConfig) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_LINBreakDetectLengthConfig) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_LINBreakDetectLengthConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_LINBreakDetectLengthConfig) refers to stm32f4xx_usart.o(.text.USART_LINBreakDetectLengthConfig) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_LINCmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_LINCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_LINCmd) refers to stm32f4xx_usart.o(.text.USART_LINCmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_SendBreak) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_SendBreak) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_SendBreak) refers to stm32f4xx_usart.o(.text.USART_SendBreak) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_HalfDuplexCmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_HalfDuplexCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_HalfDuplexCmd) refers to stm32f4xx_usart.o(.text.USART_HalfDuplexCmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_SetGuardTime) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str.8
+    stm32f4xx_usart.o(.text.USART_SetGuardTime) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_SetGuardTime) refers to stm32f4xx_usart.o(.text.USART_SetGuardTime) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_SmartCardCmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str.8
+    stm32f4xx_usart.o(.text.USART_SmartCardCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_SmartCardCmd) refers to stm32f4xx_usart.o(.text.USART_SmartCardCmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_SmartCardNACKCmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str.8
+    stm32f4xx_usart.o(.text.USART_SmartCardNACKCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_SmartCardNACKCmd) refers to stm32f4xx_usart.o(.text.USART_SmartCardNACKCmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_IrDAConfig) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_IrDAConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_IrDAConfig) refers to stm32f4xx_usart.o(.text.USART_IrDAConfig) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_IrDACmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_IrDACmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_IrDACmd) refers to stm32f4xx_usart.o(.text.USART_IrDACmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_DMACmd) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_DMACmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_DMACmd) refers to stm32f4xx_usart.o(.text.USART_DMACmd) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_ITConfig) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_ITConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_ITConfig) refers to stm32f4xx_usart.o(.text.USART_ITConfig) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_GetFlagStatus) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_GetFlagStatus) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_GetFlagStatus) refers to stm32f4xx_usart.o(.text.USART_GetFlagStatus) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_ClearFlag) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_ClearFlag) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_ClearFlag) refers to stm32f4xx_usart.o(.text.USART_ClearFlag) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_GetITStatus) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_GetITStatus) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_GetITStatus) refers to stm32f4xx_usart.o(.text.USART_GetITStatus) for [Anonymous Symbol]
+    stm32f4xx_usart.o(.text.USART_ClearITPendingBit) refers to stm32f4xx_usart.o(.rodata.str1.1) for .L.str
+    stm32f4xx_usart.o(.text.USART_ClearITPendingBit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_usart.o(.ARM.exidx.text.USART_ClearITPendingBit) refers to stm32f4xx_usart.o(.text.USART_ClearITPendingBit) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_DeInit) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_HSEConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str
+    stm32f4xx_rcc.o(.text.RCC_HSEConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_HSEConfig) refers to stm32f4xx_rcc.o(.text.RCC_HSEConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_WaitForHSEStartUp) refers to stm32f4xx_rcc.o(.text.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_WaitForHSEStartUp) refers to stm32f4xx_rcc.o(.text.RCC_WaitForHSEStartUp) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_GetFlagStatus) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.32
+    stm32f4xx_rcc.o(.text.RCC_GetFlagStatus) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetFlagStatus) refers to stm32f4xx_rcc.o(.text.RCC_GetFlagStatus) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_AdjustHSICalibrationValue) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.2
+    stm32f4xx_rcc.o(.text.RCC_AdjustHSICalibrationValue) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AdjustHSICalibrationValue) refers to stm32f4xx_rcc.o(.text.RCC_AdjustHSICalibrationValue) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_HSICmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_HSICmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_HSICmd) refers to stm32f4xx_rcc.o(.text.RCC_HSICmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_LSEConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.4
+    stm32f4xx_rcc.o(.text.RCC_LSEConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LSEConfig) refers to stm32f4xx_rcc.o(.text.RCC_LSEConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_LSICmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_LSICmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LSICmd) refers to stm32f4xx_rcc.o(.text.RCC_LSICmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_PLLConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.5
+    stm32f4xx_rcc.o(.text.RCC_PLLConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLConfig) refers to stm32f4xx_rcc.o(.text.RCC_PLLConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_PLLCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_PLLCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLCmd) refers to stm32f4xx_rcc.o(.text.RCC_PLLCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_PLLI2SConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.10
+    stm32f4xx_rcc.o(.text.RCC_PLLI2SConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLI2SConfig) refers to stm32f4xx_rcc.o(.text.RCC_PLLI2SConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_PLLI2SCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_PLLI2SCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLI2SCmd) refers to stm32f4xx_rcc.o(.text.RCC_PLLI2SCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_PLLSAICmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_PLLSAICmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLSAICmd) refers to stm32f4xx_rcc.o(.text.RCC_PLLSAICmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_ClockSecuritySystemCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_ClockSecuritySystemCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ClockSecuritySystemCmd) refers to stm32f4xx_rcc.o(.text.RCC_ClockSecuritySystemCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_MCO1Config) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.13
+    stm32f4xx_rcc.o(.text.RCC_MCO1Config) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_MCO1Config) refers to stm32f4xx_rcc.o(.text.RCC_MCO1Config) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_MCO2Config) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.15
+    stm32f4xx_rcc.o(.text.RCC_MCO2Config) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_MCO2Config) refers to stm32f4xx_rcc.o(.text.RCC_MCO2Config) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_SYSCLKConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.17
+    stm32f4xx_rcc.o(.text.RCC_SYSCLKConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_SYSCLKConfig) refers to stm32f4xx_rcc.o(.text.RCC_SYSCLKConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetSYSCLKSource) refers to stm32f4xx_rcc.o(.text.RCC_GetSYSCLKSource) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_HCLKConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.18
+    stm32f4xx_rcc.o(.text.RCC_HCLKConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_HCLKConfig) refers to stm32f4xx_rcc.o(.text.RCC_HCLKConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_PCLK1Config) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.19
+    stm32f4xx_rcc.o(.text.RCC_PCLK1Config) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PCLK1Config) refers to stm32f4xx_rcc.o(.text.RCC_PCLK1Config) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_PCLK2Config) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.19
+    stm32f4xx_rcc.o(.text.RCC_PCLK2Config) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PCLK2Config) refers to stm32f4xx_rcc.o(.text.RCC_PCLK2Config) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_GetClocksFreq) refers to stm32f4xx_rcc.o(.rodata.APBAHBPrescTable) for APBAHBPrescTable
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetClocksFreq) refers to stm32f4xx_rcc.o(.text.RCC_GetClocksFreq) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_RTCCLKConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.20
+    stm32f4xx_rcc.o(.text.RCC_RTCCLKConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_RTCCLKConfig) refers to stm32f4xx_rcc.o(.text.RCC_RTCCLKConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_RTCCLKCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_RTCCLKCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_RTCCLKCmd) refers to stm32f4xx_rcc.o(.text.RCC_RTCCLKCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_BackupResetCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.3
+    stm32f4xx_rcc.o(.text.RCC_BackupResetCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_BackupResetCmd) refers to stm32f4xx_rcc.o(.text.RCC_BackupResetCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_I2SCLKConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.21
+    stm32f4xx_rcc.o(.text.RCC_I2SCLKConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_I2SCLKConfig) refers to stm32f4xx_rcc.o(.text.RCC_I2SCLKConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_TIMCLKPresConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.22
+    stm32f4xx_rcc.o(.text.RCC_TIMCLKPresConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_TIMCLKPresConfig) refers to stm32f4xx_rcc.o(.text.RCC_TIMCLKPresConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.23
+    stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB1PeriphClockCmd) refers to stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.24
+    stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB2PeriphClockCmd) refers to stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.25
+    stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB1PeriphClockCmd) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.26
+    stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB2PeriphClockCmd) refers to stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_AHB1PeriphResetCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.27
+    stm32f4xx_rcc.o(.text.RCC_AHB1PeriphResetCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB1PeriphResetCmd) refers to stm32f4xx_rcc.o(.text.RCC_AHB1PeriphResetCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_AHB2PeriphResetCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.24
+    stm32f4xx_rcc.o(.text.RCC_AHB2PeriphResetCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB2PeriphResetCmd) refers to stm32f4xx_rcc.o(.text.RCC_AHB2PeriphResetCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.25
+    stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB1PeriphResetCmd) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.28
+    stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB2PeriphResetCmd) refers to stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.29
+    stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockLPModeCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB1PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockLPModeCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.24
+    stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockLPModeCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB2PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockLPModeCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.25
+    stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockLPModeCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB1PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockLPModeCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.26
+    stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockLPModeCmd) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB2PeriphClockLPModeCmd) refers to stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockLPModeCmd) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_LSEModeConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.30
+    stm32f4xx_rcc.o(.text.RCC_LSEModeConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LSEModeConfig) refers to stm32f4xx_rcc.o(.text.RCC_LSEModeConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_ITConfig) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.31
+    stm32f4xx_rcc.o(.text.RCC_ITConfig) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ITConfig) refers to stm32f4xx_rcc.o(.text.RCC_ITConfig) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ClearFlag) refers to stm32f4xx_rcc.o(.text.RCC_ClearFlag) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_GetITStatus) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.33
+    stm32f4xx_rcc.o(.text.RCC_GetITStatus) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetITStatus) refers to stm32f4xx_rcc.o(.text.RCC_GetITStatus) for [Anonymous Symbol]
+    stm32f4xx_rcc.o(.text.RCC_ClearITPendingBit) refers to stm32f4xx_rcc.o(.rodata.str1.1) for .L.str.34
+    stm32f4xx_rcc.o(.text.RCC_ClearITPendingBit) refers to libs.o(.text.__aeabi_assert) for __aeabi_assert
+    stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ClearITPendingBit) refers to stm32f4xx_rcc.o(.text.RCC_ClearITPendingBit) for [Anonymous Symbol]
+    startup_stm32f40_41xxx.o(RESET) refers to startup_stm32f40_41xxx.o(STACK) for __initial_sp
+    startup_stm32f40_41xxx.o(RESET) refers to startup_stm32f40_41xxx.o(.text) for Reset_Handler
+    startup_stm32f40_41xxx.o(.text) refers to rcc_1.o(.text.rcc_init) for rcc_init
+    startup_stm32f40_41xxx.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_stm32f4xx.o(.text.SystemInit) refers to system_stm32f4xx.o(.text.SetSysClock) for SetSysClock
+    system_stm32f4xx.o(.ARM.exidx.text.SystemInit) refers to system_stm32f4xx.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f4xx.o(.ARM.exidx.text.SetSysClock) refers to system_stm32f4xx.o(.text.SetSysClock) for [Anonymous Symbol]
+    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    main.o(.text.main) refers to rcc_1.o(.text.rcc_init) for rcc_init
+    main.o(.text.main) refers to gpio_1.o(.text.gpio_init) for gpio_init
+    main.o(.text.main) refers to gpio_config.o(.text.gpio_init) for gpio_init
+    main.o(.text.main) refers to driver.o(.text.driver_init) for driver_init
+    main.o(.text.main) refers to led.o(.text.led) for led
+    main.o(.text.main) refers to delay.o(.text.delay_ms) for delay_ms
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    libs.o(.text.__aeabi_assert) refers to libs.o(.rodata.str1.1) for .L.str
+    libs.o(.text.__aeabi_assert) refers to printfa.o(i.__0printf) for printf
+    libs.o(.ARM.exidx.text.__aeabi_assert) refers to libs.o(.text.__aeabi_assert) for [Anonymous Symbol]
+    gpio_1.o(.text.gpio_init) refers to stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    gpio_1.o(.text.gpio_init) refers to stm32f4xx_gpio.o(.text.GPIO_Init) for GPIO_Init
+    gpio_1.o(.ARM.exidx.text.gpio_init) refers to gpio_1.o(.text.gpio_init) for [Anonymous Symbol]
+    driver.o(.text.driver_init) refers to gpio_1.o(.text.gpio_init) for gpio_init
+    driver.o(.text.driver_init) refers to gpio_config.o(.text.gpio_init) for gpio_init
+    driver.o(.ARM.exidx.text.driver_init) refers to driver.o(.text.driver_init) for [Anonymous Symbol]
+    delay.o(.ARM.exidx.text.delay_ms) refers to delay.o(.text.delay_ms) for [Anonymous Symbol]
+    rcc_1.o(.ARM.exidx.text.rcc_init) refers to rcc_1.o(.text.rcc_init) for [Anonymous Symbol]
+    gpio_config.o(.ARM.exidx.text.gpio_init) refers to gpio_config.o(.text.gpio_init) for [Anonymous Symbol]
+    led.o(.ARM.exidx.text.led) refers to led.o(.text.led) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f40_41xxx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f40_41xxx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    fputc.o(i.fputc) refers (Special) to iusesemip.o(.text) for __I$use$semihosting$fputc
+    fputc.o(i.fputc) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fputc_h.o(i._fputc$hlt) refers (Special) to iusesemip.o(.text) for __I$use$semihosting$fputc
+    fputc_h.o(i._fputc$hlt) refers (Special) to semi.o(.text) for __semihosting_library_function
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+

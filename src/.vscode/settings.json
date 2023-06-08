@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        ".tpp": "cpp",
+        ".cu": "cpp",
+        ".tcu": "cpp",
+        "*.cc": "cpp",
+        "*.mk": "makefile",
+        "*.build": "makefile",
+        "**/Makefile.**": "makefile",
+        "*.inc": "c",
+        "*.c": "c",
+        "makefile.*": "makefile",
+        "Makefile.*": "makefile",
+        "include.h": "c",
+        "libs.h": "c",
+        "stddef.h": "c",
+        "std_lib.h": "c",
+        "stm32f4xx.h": "c",
+        "stm32f4xx_gpio.h": "c",
+        "stm32f411xe.h": "c",
+        "config.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

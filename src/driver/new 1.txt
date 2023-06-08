@@ -1,0 +1,4 @@
+C:\Keil_v5\ARM\ARMCLANG\bin\fromelf.exe --bin --output bin/f411_proj.bin Objects/f411_proj.axf
+
+
+C:\Keil_v5\ARM\ARMCLANG\bin\fromelf.exe -c  Objects/f411_proj.axf -o  Objects/f411_proj.txt

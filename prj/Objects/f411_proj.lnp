@@ -1,0 +1,20 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\misc.o"
+".\objects\stm32f4xx_gpio.o"
+".\objects\stm32f4xx_usart.o"
+".\objects\stm32f4xx_rcc.o"
+".\objects\startup_stm32f40_41xxx.o"
+".\objects\system_stm32f4xx.o"
+".\objects\main.o"
+".\objects\libs.o"
+".\objects\usart.o"
+".\objects\gpio_1.o"
+".\objects\driver.o"
+".\objects\delay.o"
+".\objects\rcc_1.o"
+".\objects\gpio_config.o"
+".\objects\led.o"
+--library_type=microlib --strict --scatter ".\Objects\f411_proj.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\f411_proj.map" -o .\Objects\f411_proj.axf
