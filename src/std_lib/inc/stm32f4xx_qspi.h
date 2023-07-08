@@ -49,10 +49,10 @@ typedef struct
   
   uint32_t QSPI_ComConfig_FMode;            /* Specifies the Functional Mode
                                           This parameter can be a value of @ref QSPI_ComConfig_Functional_Mode*/  
-	
+    
   uint32_t QSPI_ComConfig_DDRMode;          /* Specifies the Double Data Rate Mode
                                           This parameter can be a value of @ref QSPI_ComConfig_DoubleDataRateMode*/
-	
+    
   uint32_t QSPI_ComConfig_DHHC;            /* Specifies the Delay Half Hclk Cycle
                                           This parameter can be a value of @ref QSPI_ComConfig_DelayHalfHclkCycle*/
   
@@ -180,7 +180,7 @@ typedef struct
 /**
   * @}
   */
-	
+    
 /** @defgroup QSPI_Fash_Select 
   * @{
   */
@@ -190,7 +190,7 @@ typedef struct
 /**
   * @}
   */
-	
+    
 /** @defgroup QSPI_Dual_Flash 
   * @{
   */
@@ -215,7 +215,7 @@ typedef struct
 /**
   * @}
   */
-	
+    
 /** @defgroup QSPI_ComConfig_DoubleDataRateMode 
   * @{
   */
@@ -226,7 +226,7 @@ typedef struct
 /**
   * @}
   */
-	
+    
 /** @defgroup QSPI_ComConfig_DelayHalfHclkCycle 
   * @{
   */

@@ -128,7 +128,7 @@
 #define SMCR_ETR_MASK      ((uint16_t)0x00FF)
 #define CCMR_OFFSET        ((uint16_t)0x0018)
 #define CCER_CCE_SET       ((uint16_t)0x0001)
-#define	CCER_CCNE_SET      ((uint16_t)0x0004)
+#define CCER_CCNE_SET      ((uint16_t)0x0004)
 #define CCMR_OC13M_MASK    ((uint16_t)0xFF8F)
 #define CCMR_OC24M_MASK    ((uint16_t)0x8FFF)
 

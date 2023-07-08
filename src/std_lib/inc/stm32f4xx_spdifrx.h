@@ -159,7 +159,7 @@ typedef struct
 /**
   * @}
   */
-	
+    
 /** @defgroup SPDIFRX_Interrupts_Definition SPDIFRX Interrupts Definition
   * @{
   */
@@ -180,7 +180,7 @@ typedef struct
 /**
   * @}
   */
-	
+    
 /** @defgroup SPDIFRX_Flags_Definition SPDIFRX Flags Definition
   * @{
   */
@@ -197,13 +197,13 @@ typedef struct
                                   ((FLAG) == SPDIFRX_FLAG_PERR) || ((FLAG) == SPDIFRX_FLAG_OVR) || \
                                   ((FLAG) == SPDIFRX_SR_SBD) || ((FLAG) == SPDIFRX_SR_SYNCD) || \
                                   ((FLAG) == SPDIFRX_SR_FERR) || ((FLAG) == SPDIFRX_SR_SERR) || \
-				  ((FLAG) == SPDIFRX_SR_TERR))  
+                  ((FLAG) == SPDIFRX_SR_TERR))  
 #define IS_SPDIFRX_CLEAR_FLAG(FLAG)    (((FLAG) == SPDIFRX_FLAG_PERR) || ((FLAG) == SPDIFRX_FLAG_OVR)   || \
                                         ((FLAG) == SPDIFRX_SR_SBD) || ((FLAG) == SPDIFRX_SR_SYNCD))  
 /**
   * @}
   */
- 	
+     
 /**
   * @}
   */

@@ -269,7 +269,7 @@ void PWR_PVDCmd(FunctionalState NewState)
       (+) WakeUp pin is used to wakeup the system from Standby mode. This pin is
           forced in input pull down configuration and is active on rising edges.
       (+) There is one Wake-up pin: Wake-up Pin 1 on PA.00.
-	   (++) For STM32F446xx there are two Wake-Up pins: Pin1 on PA.00 and Pin2 on PC.13
+       (++) For STM32F446xx there are two Wake-Up pins: Pin1 on PA.00 and Pin2 on PC.13
            (++) For STM32F410xx/STM32F412xG/STM32F413_423xx there are three Wake-Up pins: Pin1 on PA.00, Pin2 on PC.00 and Pin3 on PC.01
 @endverbatim
   * @{

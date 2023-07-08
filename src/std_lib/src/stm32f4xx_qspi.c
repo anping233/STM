@@ -219,8 +219,8 @@ void QSPI_Init(QSPI_InitTypeDef* QSPI_InitStruct)
   assert(IS_QSPI_CKMODE(QSPI_InitStruct->QSPI_CKMode));
   assert(IS_QSPI_CSHTIME(QSPI_InitStruct->QSPI_CSHTime));
   assert(IS_QSPI_FSIZE(QSPI_InitStruct->QSPI_FSize));
-	assert(IS_QSPI_FSEL(QSPI_InitStruct->QSPI_FSelect));
-	assert(IS_QSPI_DFM(QSPI_InitStruct->QSPI_DFlash));
+    assert(IS_QSPI_FSEL(QSPI_InitStruct->QSPI_FSelect));
+    assert(IS_QSPI_DFM(QSPI_InitStruct->QSPI_DFlash));
 
   /*------------------------ QSPI CR Configuration ------------------------*/
   /* Get the QUADSPI CR1 value */
@@ -230,8 +230,8 @@ void QSPI_Init(QSPI_InitTypeDef* QSPI_InitStruct)
   /* Configure QUADSPI: Prescaler and Sample Shift */
   tmpreg |= (uint32_t)(((QSPI_InitStruct->QSPI_Prescaler)<<24)
                         |(QSPI_InitStruct->QSPI_SShift)
-	                      |(QSPI_InitStruct->QSPI_FSelect)
-	                      |(QSPI_InitStruct->QSPI_DFlash));
+                          |(QSPI_InitStruct->QSPI_FSelect)
+                          |(QSPI_InitStruct->QSPI_DFlash));
   /* Write to QUADSPI CR */
   QUADSPI->CR = tmpreg;
 
@@ -270,8 +270,8 @@ void QSPI_ComConfig_Init(QSPI_ComConfig_InitTypeDef* QSPI_ComConfig_InitStruct)
   assert(IS_QSPI_ADMODE      (QSPI_ComConfig_InitStruct->QSPI_ComConfig_ADMode));
   assert(IS_QSPI_IMODE       (QSPI_ComConfig_InitStruct->QSPI_ComConfig_IMode));
   assert(IS_QSPI_INSTRUCTION (QSPI_ComConfig_InitStruct->QSPI_ComConfig_Ins));
-	assert(IS_QSPI_DDRMODE     (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DDRMode));
-	assert(IS_QSPI_DHHC        (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DHHC));
+    assert(IS_QSPI_DDRMODE     (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DDRMode));
+    assert(IS_QSPI_DHHC        (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DHHC));
 
   /*------------------------ QUADSPI CCR Configuration ------------------------*/
   /* Get the QUADSPI CCR value */
@@ -281,7 +281,7 @@ void QSPI_ComConfig_Init(QSPI_ComConfig_InitTypeDef* QSPI_ComConfig_InitStruct)
   /* Configure QUADSPI: CCR Configuration */
   tmpreg |=  (uint32_t)( (QSPI_ComConfig_InitStruct->QSPI_ComConfig_FMode)
                        | (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DDRMode)
-											 | (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DHHC)
+                                             | (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DHHC)
                        | (QSPI_ComConfig_InitStruct->QSPI_ComConfig_SIOOMode)
                        | (QSPI_ComConfig_InitStruct->QSPI_ComConfig_DMode)
                        | (QSPI_ComConfig_InitStruct->QSPI_ComConfig_ABSize)
