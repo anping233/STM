@@ -12,3 +12,8 @@ void led(int x)
 	return;
 }
 
+void led_toggle(void)
+{
+    GPIOC->IDR ^= (1<<gpio_pin13);
+    return;
+}
