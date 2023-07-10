@@ -18,6 +18,24 @@ void led_toggle(void)
     return;
 }
 
+void led1(uint8_t x)
+{
+    if(x >= 1)
+    {
+        GPIOA->BSRR |= GPIO_BSRR_BS5;
+    }
+    else
+    {
+        GPIOA->BSRR |= GPIO_BSRR_BR5;
+    }
+    return;
+}
+
+void led1_toggle(void)
+{
+    GPIOA->IDR ^= (1 << gpio_pin5);
+}
+
 #if LED_TEST
     void led_test(void)
     {
@@ -27,5 +45,16 @@ void led_toggle(void)
         led(0);
         led(1);
         return;
+    }
+#endif
+
+#if LED1_TEST
+    void led1_test(void)
+    {
+        led1(1);
+        led1(0);
+        delay_ms(300);
+        led1(1);
+        led(0);
     }
 #endif

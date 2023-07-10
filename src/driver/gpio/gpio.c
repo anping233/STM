@@ -25,6 +25,17 @@ void led_gpio_init(void)
     return;
 }
 
+void led1_gpio_init(void)
+{
+    GPIOA->MODER   |= GPIO_MODER_MODER5_0;    /*引脚5设置为输出模式*/
+    GPIOA->OTYPER  &= ~GPIO_OTYPER_OT5;    /*引脚5设置为推挽模式*/
+    GPIOA->OSPEEDR &= ~GPIO_OSPEEDR_OSPEED5;
+    GPIOA->OSPEEDR |= GPIO_OSPEEDR_OSPEED5_0;    /*引脚5设置为中速模式*/
+    GPIOA->PUPDR   |= GPIO_PUPDR_PUPD5_0;  /*引脚5设置为上拉模式*/
+
+    return;
+}
+
 void usart_gpio_init(void)
 {
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;/*使能GPIOA*/
