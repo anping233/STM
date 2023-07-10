@@ -2,8 +2,7 @@
 
 
 void driver_init(void) {
-    gpio_init();
     usart_init();
-    //SysTick_Config();
+    timer_init();
     return;
 }
