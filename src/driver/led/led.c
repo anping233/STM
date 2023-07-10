@@ -17,3 +17,15 @@ void led_toggle(void)
     GPIOC->IDR ^= (1<<gpio_pin13);
     return;
 }
+
+#if LED_TEST
+    void led_test(void)
+    {
+        led(0);
+        led(1);
+        delay_ms(300);
+        led(0);
+        led(1);
+        return;
+    }
+#endif
