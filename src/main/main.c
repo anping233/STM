@@ -17,6 +17,10 @@ int main(int argc, char **argv) {
          #if TIMER_TEST
             timer_test();
          #endif
+
+         #if WWDG_TEST
+            wwdg_test();
+         #endif
 	 }
     return 0;
 }
