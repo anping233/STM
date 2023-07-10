@@ -13,6 +13,10 @@ int main(int argc, char **argv) {
          #if USART_TEST
             usart_test();
          #endif
+
+         #if TIMER_TEST
+            timer_test();
+         #endif
 	 }
     return 0;
 }
