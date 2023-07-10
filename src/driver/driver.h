@@ -7,5 +7,6 @@
 #include "rcc/rcc.h"
 #include "led/led.h"
 #include "timer/timer.h"
+#include "wwdg/wwdg.h"
 
 void driver_init(void);
