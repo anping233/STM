@@ -37,3 +37,11 @@ void usart_init(void)
     USART1->CR1 |= (USART_CR1_RE);/*Receiver enable*/
     USART1->CR1 |= (USART_CR1_UE); /*usart enable*/
 }
+
+#if USART_TEST
+    void usart_test(void)
+    {
+        printf("hello!");
+        return;
+    }
+#endif

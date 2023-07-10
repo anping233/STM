@@ -9,6 +9,10 @@ int main(int argc, char **argv) {
 		 #if LED_TEST
             led_test();
          #endif
+
+         #if USART_TEST
+            usart_test();
+         #endif
 	 }
     return 0;
 }
