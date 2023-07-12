@@ -36,4 +36,5 @@ static inline int gpio_get(GPIO_TypeDef *port, uint32_t pin) {
 void led_gpio_init(void);
 void usart_gpio_init(void);
 void led1_gpio_init(void);
+void gpio_init_24c256(void);
 
