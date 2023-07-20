@@ -20,16 +20,16 @@ void i2c_writebit(uint8_t bit)
 uint8_t i2c_readbit(void)
 {
     if(gpio_get(GPIOB, gpio_pin7))
-    return 1;
+        return 1;
     else
-    return 0;
+        return 0;
 }
 
 void i2c_init(void)
 {
     RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;/*使能i2c1时钟*/
 
-    i2c_gpio_init();
+    gpio_init_24c256();
 
     sda_h();
     sck_h();
@@ -62,6 +62,8 @@ void i2c_ack(void)
     sck_h();
     sck_l();
 
+    sck_l();
+    sda_h();
     return;
 }
 
@@ -71,6 +73,8 @@ void i2c_nack(void)
     sck_h();
     sck_l();
 
+    sck_l();
+    sda_h();
     return;
 }
 
@@ -100,7 +104,11 @@ uint8_t i2c_read_byte(uint8_t ack)
         byte <<= 1;
         byte |= i2c_readbit();
         sck_l();
+        delay_us(20);
     }
+
+    sck_h();
+    sck_l();
 
     if(ack)
     {
@@ -126,6 +134,5 @@ void i2c_send_data(uint8_t *data, size_t len)
 
     return;
 }
-
 
 

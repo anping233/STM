@@ -21,6 +21,13 @@ int main(int argc, char **argv) {
          #if WWDG_TEST
             wwdg_test();
          #endif
+
+         #if TEST_24C256
+            uint8_t temp = 0;
+            temp = test_24c256();
+            printf("%d",temp);
+
+         #endif
 	 }
     return 0;
 }

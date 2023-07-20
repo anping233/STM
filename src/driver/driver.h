@@ -8,5 +8,6 @@
 #include "led/led.h"
 #include "timer/timer.h"
 #include "wwdg/wwdg.h"
+#include "i2c/i2c.h"
 
 void driver_init(void);

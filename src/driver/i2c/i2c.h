@@ -1,7 +1,7 @@
 #pragma once
 
 void i2c_writebit(uint8_t bit);
-void i2c_readbit(void);
+uint8_t i2c_readbit(void);
 void i2c_init(void);
 void i2c_start(void);
 void i2c_stop(void);
