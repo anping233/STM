@@ -3,7 +3,7 @@
 #include"config.h"
 
 
-void byte_write(uint8_t *data, uint16_t addr)
+void byte_write(uint8_t data, uint16_t addr)
 {
 
     i2c_start();
@@ -21,10 +21,12 @@ void byte_write(uint8_t *data, uint16_t addr)
     sck_l();
     i2c_stop();
 
+    delay_ms(20);
+
     return;
 }
-
-void page_write(uint8_t *data, size_t len)
+#if 0
+void page_write(uint8_t data, size_t len)
 {
     i2c_start();
     i2c_send_byte(SLAVE_ADDR_w);
@@ -43,6 +45,7 @@ void page_write(uint8_t *data, size_t len)
 
     return;
 }
+#endif
 
 uint8_t current_addr_read(void)
 {
@@ -62,7 +65,7 @@ uint8_t current_addr_read(void)
 
 uint8_t randow_read(uint16_t addr)
 {
-    uint8_t temp;
+    uint8_t temp = 0;
     i2c_start();
     i2c_send_byte(SLAVE_ADDR_w);
     sck_h();
@@ -83,6 +86,8 @@ uint8_t randow_read(uint16_t addr)
     return temp;
 }
 
+#if 0
+
 void seq_read(void)
 {
     i2c_start();
@@ -92,6 +97,7 @@ void seq_read(void)
 
     return;
 }
+#endif
 
 void init_24c256(void)
 {
@@ -105,12 +111,12 @@ void init_24c256(void)
 #if TEST_24C256
     uint8_t test_24c256(void)
     {
-        uint8_t temp = 0;
+        uint8_t temp0 = 0;
         byte_write(0x12, 0x1234);
-        temp = randow_read(0x1234);
+        temp0 = randow_read(0x1234);
 
-        if(temp == 0x12)
-            return 1
+        if(temp0 == 0x12)
+            return 1;
         else
             return 0;
     }
