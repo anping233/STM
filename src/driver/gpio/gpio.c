@@ -27,6 +27,8 @@ void led_gpio_init(void)
 
 void led1_gpio_init(void)
 {
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
+
     GPIOA->MODER   |= GPIO_MODER_MODER5_0;    /*引脚5设置为输出模式*/
     GPIOA->OTYPER  &= ~GPIO_OTYPER_OT5;    /*引脚5设置为推挽模式*/
     GPIOA->OSPEEDR &= ~GPIO_OSPEEDR_OSPEED5;
@@ -79,6 +81,27 @@ void gpio_init_24c256(void)
     GPIOB->OSPEEDR &= ~(GPIO_OSPEEDR_OSPEED7_Msk);
     GPIOB->OSPEEDR |= (GPIO_OSPEEDR_OSPEED7_0);
     GPIOB->PUPDR &= ~(GPIO_PUPDR_PUPD7_Msk);
+
+    return;
+}
+
+void key_gpio_init(void)
+{
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
+
+    GPIOB->MODER &= ~(GPIO_MODER_MODE1_Msk);
+    GPIOB->OTYPER |= GPIO_OTYPER_OT1;
+    GPIOB->OSPEEDR &= ~(GPIO_OSPEEDR_OSPEED1_Msk);
+    GPIOB->OSPEEDR |= (GPIO_OSPEEDR_OSPEED1_0);
+    GPIOB->PUPDR &= ~(GPIO_PUPDR_PUPD1_Msk);
+    GPIOB->PUPDR |= (GPIO_PUPDR_PUPD1_0);
+
+    GPIOB->MODER &= ~(GPIO_MODER_MODE2_Msk);
+    GPIOB->OTYPER |= GPIO_OTYPER_OT2;
+    GPIOB->OSPEEDR &= ~(GPIO_OSPEEDR_OSPEED2_Msk);
+    GPIOB->OSPEEDR |= (GPIO_OSPEEDR_OSPEED2_0);
+    GPIOB->PUPDR &= ~(GPIO_PUPDR_PUPD2_Msk);
+    GPIOB->PUPDR |= (GPIO_PUPDR_PUPD2_0);
 
     return;
 }
