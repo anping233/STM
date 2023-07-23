@@ -7,6 +7,8 @@ void led(int x);
 void led_toggle(void);
 void led1(uint8_t x);
 void led1_toggle(void);
+void led_init(void);
+void led1_init(void);
 
 #if LED_TEST
     void led_test(void);

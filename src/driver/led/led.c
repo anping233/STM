@@ -3,18 +3,24 @@ void led(int x)
 {
 	if(x >= 1)
 	{
-		GPIOC->BSRR |= GPIO_BSRR_BS13;
+        gpio_set(GPIOC, gpio_pin13);
 	}
 	else
 	{
-		GPIOC->BSRR |= GPIO_BSRR_BR13;
+		gpio_reset(GPIOC, gpio_pin13);
 	}
 	return;
 }
 
+void led_init(void)
+{
+    led_gpio_init();
+    return;
+}
+
 void led_toggle(void)
 {
-    GPIOC->IDR ^= (1<<gpio_pin13);
+    GPIOC->ODR ^= (1<<gpio_pin13);
     return;
 }
 
@@ -22,18 +28,24 @@ void led1(uint8_t x)
 {
     if(x >= 1)
     {
-        GPIOA->BSRR |= GPIO_BSRR_BS5;
+        gpio_set(GPIOA, gpio_pin5);
     }
     else
     {
-        GPIOA->BSRR |= GPIO_BSRR_BR5;
+        gpio_reset(GPIOA, gpio_pin5);
     }
     return;
 }
 
 void led1_toggle(void)
 {
-    GPIOA->IDR ^= (1 << gpio_pin5);
+    GPIOA->ODR ^= (1 << gpio_pin5);
+}
+
+void led1_init(void)
+{
+    led1_gpio_init();
+    return;
 }
 
 #if LED_TEST
