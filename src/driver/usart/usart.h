@@ -1,6 +1,6 @@
 #pragma once
 
-#define USART_TEST 1
+#define USART_TEST 0
 
 void usart_init(void);
 
