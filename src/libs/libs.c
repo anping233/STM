@@ -5,14 +5,3 @@ void __aeabi_assert (const char *expr, const char *file, int line) {
     return;
 }
 
-uint8_t pow(uint8_t x, uint8_t y)
-{
-    uint8_t result = 1;
-
-    while (y--)
-    {
-        result *= x;
-    }
-
-    return result;
-}
