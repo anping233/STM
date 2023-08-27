@@ -14,7 +14,7 @@ void push_key1(uint8_t mode)
     if(mode == 1)
     key_up = 1;
 
-    if(key_up && gpio_get(GPIOB, gpio_pin1))
+    if(key_up && gpio_get(GPIOA, gpio_pin0))
     {
         key_up = 0;
         delay_ms(10);

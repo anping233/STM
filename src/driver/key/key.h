@@ -1,6 +1,6 @@
 #pragma once
 
-#define KEY_TEST 1
+#define KEY_TEST 0
 
 void key_init(void);
 void push_key1(uint8_t mode);
