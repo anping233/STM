@@ -17,7 +17,14 @@ typedef enum {
     gpio_pin13,
     gpio_pin14,
     gpio_pin15,
-}gpio_t;
+}gpio_pin_t;
+
+typedef enum {
+    gpio_input = 0,
+    gpio_output = 1,
+    gpio_af = 2,
+    gpio_analog = 3,
+}gpio_mode_t;
 
 static inline void gpio_set(GPIO_TypeDef *port, uint32_t pin) {
     periph_bit_band_set((uint32_t)&port->ODR, pin);
@@ -38,4 +45,6 @@ void usart_gpio_init(void);
 void led1_gpio_init(void);
 void gpio_init_24c256(void);
 void key_gpio_init(void);
-
+void spi_gpio_init(void);
+void tim_pwm_gpio_init(void);
+void gpio_mod_cfg(GPIO_TypeDef *port, gpio_pin_t pin, gpio_mode_t mod);
