@@ -16,7 +16,7 @@ uint8_t oled_pow(uint8_t x, uint8_t y)
 
 void send_commend(uint8_t commend)
 {
-    sda_out();
+
     i2c_start();
     i2c_send_byte(0x78);
     sck_h();
@@ -34,7 +34,7 @@ void send_commend(uint8_t commend)
 
 void send_data(uint8_t data)
 {
-    sda_out();
+
     i2c_start();
     i2c_send_byte(0x78);
     sck_h();
