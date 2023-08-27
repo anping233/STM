@@ -1,15 +1,15 @@
 #include "include.h"
 void led(int x)
 {
-	if(x >= 1)
-	{
+    if(x >= 1)
+    {
         gpio_set(GPIOC, gpio_pin13);
-	}
-	else
-	{
-		gpio_reset(GPIOC, gpio_pin13);
-	}
-	return;
+    }
+    else
+    {
+        gpio_reset(GPIOC, gpio_pin13);
+    }
+    return;
 }
 
 void led_init(void)
