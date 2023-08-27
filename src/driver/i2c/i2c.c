@@ -3,48 +3,98 @@
 #include "cmd.h"
 #include "config.h"
 
-void sda_in(void)
-{
-    GPIOB->MODER &= ~(GPIO_MODER_MODE7);
-    return;
-}
-
-void sda_out(void)
-{
-    GPIOB->MODER &= ~(GPIO_MODER_MODE7_Msk);
-    GPIOB->MODER |= (GPIO_MODER_MODE7_0);
-    return;
-}
-
-void i2c_writebit(uint8_t bit)
-{
-    sda_out();
+static inline void i2c_writebit(uint8_t bit) {
+    sck_l();
     if(bit >= 1)
-    {
-        sck_l();
-        gpio_set(GPIOB, gpio_pin7);
-        sck_h();
-    }
+        gpio_set(I2C_SDA_GPIO_PORT, I2C_SDA_GPIO_PIN);
     else
-    {
-        sck_l();
-        gpio_reset(GPIOB, gpio_pin7);
-        sck_h();
-    }
+        gpio_reset(I2C_SDA_GPIO_PORT, I2C_SDA_GPIO_PIN);
+    sck_h();
+    delay_us(I2C_DELAY);
 
     sck_l();
     sda_h();
     return;
 }
 
-uint8_t i2c_readbit(void)
-{
-    sda_in();
-    if(gpio_get(GPIOB, gpio_pin7))
-        return 1;
-    else
-        return 0;
+static inline void sda_output(void) {
+    gpio_mod_cfg(I2C_SDA_GPIO_PORT, I2C_SDA_GPIO_PIN, gpio_output);
+    return;
 }
+
+
+static inline void sda_input(void) {
+    gpio_mod_cfg(I2C_SDA_GPIO_PORT, I2C_SDA_GPIO_PIN, gpio_input);
+    return;
+}
+
+static void i2c_ack(void)
+{
+    sda_l();
+    sck_h();
+    sck_l();
+
+    sck_l();
+    sda_h();
+    return;
+}
+
+static void i2c_nack(void)
+{
+    sda_h();
+    sck_h();
+    sck_l();
+
+    sck_l();
+    sda_h();
+    return;
+}
+
+void i2c_send_byte(uint8_t byte)
+{
+    uint8_t i;
+
+    sda_output();
+
+    for(i = 0; i < 8; i++)
+    {
+        i2c_writebit(byte & (BYTE_HIGH_1_BIT >> i));
+    }
+
+    return;
+}
+
+uint8_t i2c_read_byte(uint8_t ack)
+{
+    uint8_t byte = 0;
+
+    sda_input();
+
+    for(size_t i = 0; i < 8; i++)
+    {
+        sck_h();
+        byte <<= 1;
+        byte |= gpio_get(I2C_SDA_GPIO_PORT, I2C_SDA_GPIO_PIN);
+        sck_l();
+        delay_us(20);
+    }
+
+    sck_l();
+    sda_h();
+
+    if(ack)
+    {
+        i2c_ack();
+    }
+    else
+    {
+        i2c_nack();
+    }
+
+    return byte;
+}
+
+
 
 void i2c_init(void)
 {
@@ -77,85 +127,35 @@ void i2c_stop(void)
     return;
 }
 
-void i2c_ack(void)
+
+void i2c_send_data(uint8_t *data, size_t len)
 {
-    sda_l();
-    sck_h();
-    sck_l();
-
-    sck_l();
-    sda_h();
-    return;
-}
-
-void i2c_nack(void)
-{
-    sda_h();
-    sck_h();
-    sck_l();
-
-    sck_l();
-    sda_h();
-    return;
-}
-
-void i2c_send_byte(uint8_t byte)
-{
-    uint8_t i;
-
-    sda_out();
-
-    for(i = 0; i < 8; i++)
-    {
-        i2c_writebit(byte & (BYTE_HIGH_1_BIT >> i));
-
-    }
-
-    return;
-}
-
-uint8_t i2c_read_byte(uint8_t ack)
-{
-    uint8_t byte = 0;
-
-    sda_in();
-
-    for(size_t i = 0; i < 8; i++)
-    {
-        sck_h();
-        byte <<= 1;
-        byte |= i2c_readbit();
-        sck_l();
-        delay_us(20);
-    }
-
-    sck_l();
-    sda_h();
-
-    if(ack)
-    {
-        i2c_ack();
-    }
-    else
-    {
-        i2c_nack();
-    }
-
-    return byte;
-}
-
-
-
-void i2c_send_data(uint8_t data, size_t len)
-{
-    sda_out();
+    sda_output();
     for (size_t i = 0; i < len; i++)
     {
-        i2c_send_byte(data);
+        i2c_send_byte(*data);
         data++;
     }
 
     return;
 }
 
+void i2c_recv_data(uint8_t *buffer, size_t len) {
+    sda_input();
+    for (size_t i = 0; i < len; i++)
+    {
+        if(i == 1)
+        {
+             buffer[i] = i2c_read_byte(0);
+        }
+        else
+        {
+             buffer[i] = i2c_read_byte(1);
+        }
+
+    }
+
+    return;
+
+}
 
