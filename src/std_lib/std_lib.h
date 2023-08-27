@@ -3,6 +3,7 @@
 #include "inc/stm32f4xx.h"
 #include "inc/stm32f4xx_gpio.h"
 #include "inc/stm32f4xx_rcc.h"
+#include "inc/stm32f4xx_spi.h"
 
 #define SRAM_BIT_BAND_REGION_BASE (0x40000000)
 #define SRAM_BIT_BAND_ALIAS_BASE  (0x42000000)
