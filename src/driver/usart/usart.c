@@ -4,12 +4,26 @@
 #include"reg.h"
 
 
+FILE __stdout;
+FILE __stdin;
+
+
 int fputc(int ch, FILE *f)
 {
   /* Your implementation of fputc(). */
   while (!(USART1->SR & USART_SR_TXE));/*缓冲区为空*/
   USART1->DR = (ch & USART_DR_MASK);
   return ch;
+}
+
+int fgetc( FILE *f)
+{
+        int ret = 0;
+
+    while (!(USART1->SR & USART_SR_RXNE));/*数据准备好读取*/
+        ret = (USART1->DR & 0xff);
+        fputc(ret & 0xff, NULL);
+    return ret;
 }
 
 void usart_init(void)
@@ -45,3 +59,5 @@ void usart_init(void)
         return;
     }
 #endif
+
+
