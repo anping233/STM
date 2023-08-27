@@ -3,17 +3,17 @@
 #include"config.h"
 
 
-void byte_write(uint8_t data, uint16_t addr)
+void byte_write(uint8_t *data, uint16_t addr)
 {
 
     i2c_start();
-    i2c_send_byte(SLAVE_ADDR_w);
+    i2c_send_byte(SLAVE_ADDR_W);
     sck_h();
     sck_l();
-    i2c_send_byte((addr & 0xff00) >> 8);
+    i2c_send_byte(addr >> BITS_PER_BYTE);
     sck_h();
     sck_l();
-    i2c_send_byte(addr & 0x00ff);
+    i2c_send_byte(addr & (nbits(BITS_PER_BYTE)));
     sck_h();
     sck_l();
     i2c_send_data(data, sizeof(uint8_t));
@@ -25,17 +25,17 @@ void byte_write(uint8_t data, uint16_t addr)
 
     return;
 }
-#if 0
-void page_write(uint8_t data, size_t len)
+
+void page_write(uint16_t addr, uint8_t *data, size_t len)
 {
     i2c_start();
-    i2c_send_byte(SLAVE_ADDR_w);
+    i2c_send_byte(SLAVE_ADDR_W);
     sck_h();
     sck_l();
-    i2c_send_byte(WORD0_ADDR);
+    i2c_send_byte(addr >> BITS_PER_BYTE);
     sck_h();
     sck_l();
-    i2c_send_byte(WORD1_ADDR);
+    i2c_send_byte(addr & (nbits(BITS_PER_BYTE)));
     sck_h();
     sck_l();
     i2c_send_data(data, len);
@@ -45,14 +45,13 @@ void page_write(uint8_t data, size_t len)
 
     return;
 }
-#endif
 
 uint8_t current_addr_read(void)
 {
     uint8_t temp = 0;
 
     i2c_start();
-    i2c_send_byte(SLAVE_ADDR_r);
+    i2c_send_byte(SLAVE_ADDR_R);
     sck_h();
     sck_l();
     temp = i2c_read_byte(0);
@@ -67,17 +66,17 @@ uint8_t randow_read(uint16_t addr)
 {
     uint8_t temp = 0;
     i2c_start();
-    i2c_send_byte(SLAVE_ADDR_w);
+    i2c_send_byte(SLAVE_ADDR_W);
     sck_h();
     sck_l();
-    i2c_send_byte((addr & 0xff00) >> 8);
+    i2c_send_byte(addr >> BITS_PER_BYTE);
     sck_h();
     sck_l();
-    i2c_send_byte(addr & 0x00ff);
+    i2c_send_byte(addr & (nbits(BITS_PER_BYTE)));
     sck_h();
     sck_l();
     i2c_start();
-    i2c_send_byte(SLAVE_ADDR_r);
+    i2c_send_byte(SLAVE_ADDR_R);
     sck_h();
     sck_l();
     temp = i2c_read_byte(0);
@@ -86,18 +85,29 @@ uint8_t randow_read(uint16_t addr)
     return temp;
 }
 
-#if 0
-
-void seq_read(void)
+void seq_read(uint8_t *buffer, uint8_t len)
 {
+    uint8_t i = 0;
+
     i2c_start();
-    i2c_send_byte(SLAVE_ADDR_r);
-    i2c_send_data(x,DATA_NUM);
+    i2c_send_byte(SLAVE_ADDR_R);
+
+    while (len--)
+    {
+        if(len == 1)
+        {
+            buffer[i++] = i2c_read_byte(0);
+        }
+        else
+        {
+            buffer[i++] = i2c_read_byte(1);
+        }
+    }
+
     i2c_stop();
 
     return;
 }
-#endif
 
 void init_24c256(void)
 {
@@ -108,7 +118,7 @@ void init_24c256(void)
     return;
 }
 
-#if TEST_24C256
+#if E2_24C256_TEST_EN
     uint8_t test_24c256(void)
     {
         uint8_t temp0 = 0;
