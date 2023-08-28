@@ -12,6 +12,7 @@ void driver_init(void) {
     key_init();
     spi_init();
     rgb_init();
+    dma_init(DMA1_Stream1);
 
     return;
 }

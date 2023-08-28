@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Users/anping/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+                "C:/Users/anping/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,8 +13,7 @@
                 "STM32F411xE",
                 "USE_HSE_BYPASS"
             ],
-            "compilerPath": "D:\\software\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
-            "intelliSenseMode": "windows-gcc-x64"
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4

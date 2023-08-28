@@ -12,5 +12,6 @@
 #include "key/key.h"
 #include "spi/spi.h"
 #include "rgb/rgb.h"
+#include "dma/dma.h"
 
 void driver_init(void);
