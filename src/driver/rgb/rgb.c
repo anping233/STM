@@ -55,16 +55,19 @@ void rgb_b_config(void)
 #if RGB_TEST
 void rgb_test(void)
 {
-#if 0
-    TIM3->CCR1 = fgetc(NULL);
-    TIM3->CCR2 = fgetc(NULL);
-    TIM3->CCR3 = fgetc(NULL);
-#else
-    uint8_t data[3];
+    int data[3];
 
-    for (int i = 0; i < sizeof_array(data); i++)
-        data[i] = fgetc(NULL);
-#endif
+    scanf("%d",&data[0]);
+    scanf("%d",&data[1]);
+    scanf("%d",&data[2]);
+
+    TIM3->CCR1 = data[0];
+    TIM3->CCR2 = data[1];
+    TIM3->CCR3 = data[2];
+	
+		printf("%d\n",data[0]);
+		printf("%d\n",data[1]);
+		printf("%d\n",data[2]);
     return;
 }
 #endif
