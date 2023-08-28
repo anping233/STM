@@ -28,6 +28,7 @@ int fgetc( FILE *f)
 
 void usart_init(void)
 {
+    uint8_t buffer[BUFFER_SIZE];
     uint32_t temp;
     uint8_t OVER8 = 0;
     RCC_ClocksTypeDef RCC_Clocks = {0};
@@ -50,6 +51,9 @@ void usart_init(void)
     USART1->CR1 |= (USART_CR1_TE);/* Transmitter enable*/
     USART1->CR1 |= (USART_CR1_RE);/*Receiver enable*/
     USART1->CR1 |= (USART_CR1_UE); /*usart enable*/
+    USART1->CR3 |= (USART_CR3_DMAR);
+    dma_config(DMA1_Stream1, (uint32_t)buffer, (uint32_t)&USART1->DR, BUFFER_SIZE);
+
 }
 
 #if USART_TEST
